@@ -1,7 +1,17 @@
+:root {
+  --background: #2c2c2c;
+  --button-font-size: 3em;
+  --button-height: 84px;
+  --button-width: 84px;
+  --button-font-color: #4cf490;
+  --border-radius: 9px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serifl;
 }
 
 section {
@@ -10,27 +20,42 @@ section {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  background: var(--background);
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(3, auto);
+  gap: 1em;
   width: fit-content;
 }
 
 .box {
-  height: 70px;
-  width: 70px;
-  outline: 1px solid black;
-  border: 1px solid black;
-  cursor: pointer;
-  font-size: 3.8em;
-  font-weight: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: var(--button-height);
+  width: var(--button-width);
+  background: var(--background);
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  color: var(--button-font-color);
+  box-shadow: -4px -4px 9px rgba(255, 255, 255, 0.03),
+    4px 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25),
+    -2px -4px 6px rgba(158, 158, 158, 0.1);
+}
+
+.box:hover {
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset -2px -1px 4px rgba(255, 255, 255, 0.07);
 }
 
 .header {
-  font-weight: 600;
+  margin: 1em;
+  color: white;
+  font-weight: 500;
 }
